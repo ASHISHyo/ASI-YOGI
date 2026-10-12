@@ -1,40 +1,63 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ASI YOGI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b16">
+  <title>ASI YOGI | Personal Website</title>
+
   <style>
-    
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background: #070b16;
       color: #ffffff;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 30px 15px;
       margin: 0;
+      padding: 25px 14px;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #17233b, #0d1425);
+      border: 1px solid #263c5e;
+      border-radius: 24px;
+      padding: 28px 20px;
+      max-width: 440px;
+      width: 100%;
+      margin: 0 auto;
+      box-shadow: 0 10px 35px #0008,
+                  0 0 25px #00c8ff22;
     }
 
     h1 {
       color: #00c8ff;
       font-size: 36px;
-      letter-spacing: 2px;
-      text-shadow: 0 0 15px #00c8ff, 0 0 30px #007bff, 0 0 45px #0055ff;
+      letter-spacing: 3px;
+      margin: 5px 0 15px;
+      text-shadow: 0 0 15px #00c8ff,
+                   0 0 30px #007bff;
+    }
+
+    .profile-photo {
+      width: 155px;
+      height: 155px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #00c8ff;
+      margin: 10px auto 15px;
+      display: block;
+      box-shadow: 0 0 22px #00c8ff66;
     }
 
     h3 {
       color: #cbd5e1;
-      font-size: 20px;
-    }
-
-    .card {
-      background: linear-gradient(145deg, #17233b, #0d1425);
-      padding: 30px 20px;
-      border: 1px solid #263c5e;
-      border-radius: 22px;
-      max-width: 420px;
-      margin: 25px auto;
-      box-shadow: 0 10px 35px #0008, 0 0 25px #00c8ff22;
+      font-size: 19px;
+      margin: 8px 0 15px;
     }
 
     p {
@@ -42,69 +65,193 @@
       line-height: 1.7;
     }
 
-  
-a {
-  background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
-  color: #ffffff;
-  padding: 13px 24px;
-  border-radius: 10px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  margin-top: 12px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px #00c8ff55;
-  border: 1px solid #00c8ff;
-}
-
-a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #00c8ff99;
-}
-
-
-      background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
-      color: #07111f;
-      padding: 13px 24px;
-      border-radius: 10px;
-      text-decoration: none;
-      display: inline-block;
-      font-weight: bold;
-      margin-top: 12px;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 15px #00c8ff55;
-      border: 1px solid #00c8ff;
+    .tagline {
+      color: #00c8ff;
+      font-size: 14px;
+      margin: 12px 0 22px;
     }
-    
+
+    .about {
+      background: linear-gradient(145deg, #101d33, #111827);
+      border: 1px solid #263c5e;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 22px 0;
+      text-align: left;
+    }
+
+    .about h2 {
+      color: #00c8ff;
+      text-align: center;
+      font-size: 23px;
+      margin: 0 0 18px;
+      text-shadow: 0 0 12px #00c8ff55;
+    }
+
+    .about-item {
+      background: #ffffff08;
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin: 12px 0;
+    }
+
+    .about-item strong {
+      color: #ffffff;
+    }
+
+    .about-item p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+
+    .social-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      margin-top: 22px;
+    }
+
+    .social-buttons a {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #ffffff;
+      border: 1px solid #ffffff22;
+      transition: transform 0.2s ease,
+                  box-shadow 0.2s ease;
+    }
+
+    .social-buttons a:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 18px #00c8ff44;
+    }
+
+    .instagram {
+      background: linear-gradient(90deg,
+        #833ab4, #fd1d1d, #fcb045);
+    }
+
+    .youtube {
+      background: #ff0000;
+    }
+
+    .whatsapp {
+      background: #25d366;
+      color: #07111f !important;
+    }
+
+    .footer {
+      color: #7f91ad;
+      font-size: 12px;
+      line-height: 1.8;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 360px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .card {
+        padding: 22px 14px;
+      }
+
+      .profile-photo {
+        width: 135px;
+        height: 135px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="card">
+  <main class="card">
+
     <h1>ASI YOGI</h1>
-    
-<img src="https://i.ibb.co/qYdfnDsY/IMG-20260512-194800-142.png" alt="ASI YOGI" style="width:150px;height:150px;object-fit:cover;border-radius:50%;border:4px solid #00c8ff;margin:15px auto;">
+
+    <img
+      class="profile-photo"
+      src="https://i.ibb.co/qYdfnDsY/IMG-20260512-194800-142.png"
+      alt="ASI YOGI Profile Photo"
+    >
+
     <h3>My Personal Website</h3>
+
     <p>Welcome to ASI YOGI</p>
-    <p>I am ASI YOGI. Welcome to my  world!</p>
-    <div style="background:linear-gradient(145deg,#101d33,#111827);border:1px solid #263c5e;border-radius:16px;padding:20px;margin-top:20px;text-align:left;">
-  <h2 style="color:#00c8ff;text-align:center;">✨ About Me</h2>
-  <p>👤 <strong>Personal Profile</strong><br>Welcome to my world — I am ASI YOGI.</p>
-  <p>🎬 <strong>Creator</strong><br>Sharing my journey, creativity and moments with everyone.</p>
-  <p>🥁 <strong>Music Lover</strong><br>Geming is my passion </p>
-</div>
 
-<p>✨ Personal Profile | My Journey | My Identity ✨</p>
+    <p class="tagline">
+      ✨ Personal Profile | My Journey | My Identity ✨
+    </p>
 
-  <div style="display:flex;flex-direction:column;gap:12px;margin-top:15px;">
-    <a href="https://www.instagram.com/_ashu__1110_/" target="_blank" rel="noopener noreferrer" style="background:linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045);color:white;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block;">📸 Instagram</a>
-    <a href="https://youtube.com/@rg_ashi?si=8f0ZncT16wmWS0XS" target="_blank" rel="noopener noreferrer" style="background:#ff0000;color:white;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:bold;">▶ YouTube</a>
-    <a href="https://wa.me/919057071729" target="_blank" rel="noopener noreferrer" style="background:#25D366;color:#07111f;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:bold;">💬 WhatsApp</a>
-</div>
+    <section class="about">
+      <h2>✨ About Me</h2>
 
-</div>
+      <div class="about-item">
+        <strong>👤 Personal Profile</strong>
+        <p>
+          Welcome to my world — I am ASI YOGI.
+          This is my personal space to share my journey.
+        </p>
+      </div>
 
-<p style="font-size:13px;color:#7f91ad;">Created with ❤️ by ASI YOGI</p>
+      <div class="about-item">
+        <strong>🎬 Creator</strong>
+        <p>
+          Sharing my creativity, experiences
+          and memorable moments with everyone.
+        </p>
+      </div>
 
-  </div>
+      <div class="about-item">
+        <strong>🥁 Music Lover</strong>
+        <p>
+          Music is my passion, rhythm is my vibe!
+          🎶
+        </p>
+      </div>
+    </section>
+
+    <h3>🌐 Connect With Me</h3>
+
+    <div class="social-buttons">
+
+      <a
+        class="instagram"
+        href="https://www.instagram.com/_ashu__1110_/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📸 Instagram
+      </a>
+
+      <a
+        class="youtube"
+        href="https://youtube.com/@rg_ashi?si=8f0ZncT16wmWS0XS"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ▶ YouTube
+      </a>
+
+      <a
+        class="whatsapp"
+        href="https://wa.me/919057071729"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        💬 WhatsApp
+      </a>
+
+    </div>
+
+    <div class="footer">
+      © 2026 ASI YOGI | All Rights Reserved
+      <br>
+      Created with ❤️ by ASI YOGI
+    </div>
+
+  </main>
 </body>
 </html>
